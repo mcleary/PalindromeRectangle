@@ -22,7 +22,7 @@ class CharMatrix:
         if i >= self.width or j >= self.height:
             raise IndexError("index out of bounds")
 
-        print("CharMatrix {i},{j} = {c}".format(i=i, j=j, c=self.input_matrix[i+j*self.width]))
+        # print("CharMatrix {i},{j} = {c}".format(i=i, j=j, c=self.input_matrix[i+j*self.width]))
         return self.input_matrix[i + j * self.width]
 
     def __str__(self):
@@ -69,7 +69,7 @@ class RectanglePalindromeAnalyser:
         is_pal_ver1 = self.__is_palindrome(start_i, start_j, height, 'ver')
         is_pal_ver2 = self.__is_palindrome(start_i + width - 1, start_j, height, 'ver')
 
-        print(is_pal_hor1, is_pal_hor2, is_pal_ver1, is_pal_ver2)
+        # print(is_pal_hor1, is_pal_hor2, is_pal_ver1, is_pal_ver2)
 
         return is_pal_hor1 and is_pal_hor2 and is_pal_ver1 and is_pal_ver2
 
@@ -86,7 +86,7 @@ class RectanglePalindromeAnalyser:
 
                 self.num_op += 1
 
-                print(char1, char2)
+                # print(char1, char2)
 
                 b_is_palindrome &= char1 == char2
 
@@ -100,7 +100,7 @@ class RectanglePalindromeAnalyser:
 
                 self.num_op += 1
 
-                print(char1, char2)
+                # print(char1, char2)
 
                 b_is_palindrome &= char1 == char2
 
@@ -130,7 +130,6 @@ def main():
                       'QWSSWP\n' \
                       'QDSDOP\n' \
                       'QDSDOP\n' \
-                      'QWRRWP\n' \
                       'QWRRWP\n' \
                       'QWSDOP'
 
